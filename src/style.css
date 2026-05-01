@@ -107,6 +107,7 @@ body::before {
     font-size: 32px;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 8px var(--primary-glow));
 }
