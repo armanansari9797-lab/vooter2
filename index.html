@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicGuide - Your Election Assistant</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Main navigation sidebar">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>CivicGuide</span>
+            </div>
+            
+            <nav class="nav-section" aria-label="Quick Topics Navigation">
+                <h3>Quick Topics</h3>
+                <ul class="nav-list" id="quick-topics" role="menu">
+                    <li class="nav-item" data-topic="registration" tabindex="0" role="menuitem">
+                        <i class="fas fa-id-card" aria-hidden="true"></i> Voter Registration
+                    </li>
+                    <li class="nav-item" data-topic="timeline" tabindex="0" role="menuitem">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i> Election Timeline
+                    </li>
+                    <li class="nav-item" data-topic="process" tabindex="0" role="menuitem">
+                        <i class="fas fa-person-booth" aria-hidden="true"></i> Voting Process
+                    </li>
+                    <li class="nav-item" data-topic="documents" tabindex="0" role="menuitem">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i> Required Documents
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="info-card">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Get ready for the upcoming elections. Your vote matters!</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container" id="main-content" role="main">
+            <header class="chat-header">
+                <div class="assistant-info">
+                    <div class="avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="assistant-details">
+                        <h2>Election Assistant</h2>
+                        <span class="status"><span class="status-dot"></span> Online</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-atomic="false" aria-label="Chat messages history" aria-busy="false">
+                <!-- Messages will be injected here by JS -->
+            </div>
+
+            <div class="chat-input-container">
+                <div class="quick-replies" id="quick-replies" aria-label="Quick reply options" role="group">
+                    <!-- Quick reply buttons will be injected here -->
+                </div>
+                <form id="chat-form" class="chat-form" aria-label="Message input form">
+                    <input type="text" id="user-input" placeholder="Ask me about the election process..." autocomplete="off" aria-label="Type your message to the election assistant">
+                    <button type="submit" id="send-btn" aria-label="Send message">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="src/script.js" defer></script>
+</body>
+</html>
